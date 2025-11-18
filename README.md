@@ -58,7 +58,8 @@ return 0;
 ```
 ## OUTPUT
 
-<img width="584" height="348" alt="Screenshot 2025-08-21 142312" src="https://github.com/user-attachments/assets/72d1c2e4-018b-4298-bebf-f468e5e589a7" />
+<img width="644" height="326" alt="Screenshot 2025-08-21 142540" src="https://github.com/user-attachments/assets/5d5bf33f-250a-4d43-aa22-83333d61fe06" />
+
 
 ## RESULT:
 Thus the program for playfair cipher is executed successfully.
