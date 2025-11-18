@@ -1,7 +1,5 @@
-# HILL CIPHER
-HILL CIPHER
-EX. NO: 3 AIM:
- 
+# HILL CIPHER EX. NO: 3 
+## AIM:
 
 IMPLEMENTATION OF HILL CIPHER
  
@@ -29,7 +27,39 @@ STEP-4: Multiply the two matrices to obtain the cipher text of length three.
 STEP-5: Combine all these groups to get the complete cipher text.
 
 ## PROGRAM 
+```
+#include <stdio.h>
 
+int main()
+{
+ unsigned int key[3][3] = {{6, 24, 1}, {13, 16, 10}, {20, 17, 15}};
+ unsigned int inverseKey[3][3] = {{8, 5, 10}, {21, 8, 21}, {21, 12, 8}};
+
+ char msg[4];
+ unsigned int enc[3] = {0}, dec[3] = {0};
+
+ printf("Enter plain text: ");
+ scanf("%3s", msg);
+
+ for (int i = 0; i < 3; i++)
+ for (int j = 0; j < 3; j++)
+ enc[i] += key[i][j] * (msg[j] - 'A') % 26;
+
+ printf("Encrypted Cipher Text: %c%c%c\n", enc[0] % 26 + 'A', enc[1] % 26 + 'A', enc[2] %
+26 + 'A'); 
+for (int i = 0; i < 3; i++)
+ for (int j = 0; j < 3; j++)
+ dec[i] += inverseKey[i][j] * enc[j] % 26;
+
+ printf("Decrypted Cipher Text: %c%c%c\n", dec[0] % 26 + 'A', dec[1] % 26 + 'A', dec[2]
+% 26 + 'A'); 
+return 0;
+} 
+```
 ## OUTPUT
 
-## RESULT
+<img width="584" height="348" alt="Screenshot 2025-08-21 142312" src="https://github.com/user-attachments/assets/72d1c2e4-018b-4298-bebf-f468e5e589a7" />
+
+## RESULT:
+Thus the program for playfair cipher is executed successfully.
+
